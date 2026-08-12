@@ -13,7 +13,7 @@ function App() {
 
   const buscarDados = async () => {
     try {
-      const resposta = await axios.get('https://api-rastreamento.onrender.com');
+      const resposta = await axios.get('https://api-rastreamento.onrender.com/envios');
       setIndicadores(resposta.data.indicadores);
       setEnvios(resposta.data.lista_pedidos);
     } catch (erro) {
