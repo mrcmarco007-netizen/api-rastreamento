@@ -38,7 +38,7 @@ function App() {
 
     try {
       setMensagem("Processando arquivo, aguarde...");
-      await axios.post('https://api-rastreamento.onrender.com', formData, {
+      await axios.post('https://api-rastreamento.onrender.com/importacao/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setMensagem("Planilha processada e salva no banco de dados com sucesso!");
