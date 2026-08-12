@@ -1,3 +1,4 @@
+from backend.database.database import engine, Base
 from backend.routers.envios import router as envios_router
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,6 +9,8 @@ app = FastAPI(
     description="API para acompanhamento de envios",
     version="1.0.0"
 )
+
+Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
