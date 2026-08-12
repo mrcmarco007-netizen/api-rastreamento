@@ -109,15 +109,15 @@ function App() {
       <div className="indicadores-grid">
         <div className="card">
           <h3>Total de Envios</h3>
-          <p className="numero azul">{indicadores.total_envios}</p>
+          <p className="numero azul">{indicadores?.total_envios}</p>
         </div>
         <div className="card">
           <h3>Em Andamento</h3>
-          <p className="numero amarelo">{indicadores.em_andamento}</p>
+          <p className="numero amarelo">{indicadores?.em_andamento}</p>
         </div>
         <div className="card">
           <h3>Entregues</h3>
-          <p className="numero verde">{indicadores.entregues}</p>
+          <p className="numero verde">{indicadores?.entregues}</p>
         </div>
       </div>
 
