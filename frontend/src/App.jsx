@@ -13,7 +13,7 @@ function App() {
 
   const buscarDados = async () => {
     try {
-      const resposta = await axios.get('http://127.0.0.1:8000/envios/');
+      const resposta = await axios.get('https://api-rastreamento.onrender.com');
       setIndicadores(resposta.data.indicadores);
       setEnvios(resposta.data.lista_pedidos);
     } catch (erro) {
@@ -38,7 +38,7 @@ function App() {
 
     try {
       setMensagem("Processando arquivo, aguarde...");
-      await axios.post('http://127.0.0.1:8000/importacao/upload', formData, {
+      await axios.post('https://api-rastreamento.onrender.com', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setMensagem("Planilha processada e salva no banco de dados com sucesso!");
