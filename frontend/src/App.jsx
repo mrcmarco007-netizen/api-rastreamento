@@ -49,7 +49,7 @@ function App() {
     }
   };
 
-  const enviosFiltrados = envios.filter((envio) => {
+  const enviosFiltrados = envios?.filter((envio) => {
     const termo = busca.toLowerCase();
     const nf = envio.nota_fiscal ? envio.nota_fiscal.toLowerCase() : "";
     const pedido = envio.pedido ? envio.pedido.toLowerCase() : "";
@@ -85,9 +85,9 @@ function App() {
   };
 
   const dadosGrafico = [
-    { name: 'Correios', value: envios.filter(e => e.transportadora === 'Correios').length },
-    { name: 'Aviat', value: envios.filter(e => e.transportadora === 'Aviat').length },
-    { name: 'Expedição', value: envios.filter(e => e.transportadora === 'Expedição').length },
+    { name: 'Correios', value: envios?.filter(e => e.transportadora === 'Correios').length },
+    { name: 'Aviat', value: envios?.filter(e => e.transportadora === 'Aviat').length },
+    { name: 'Expedição', value: envios?.filter(e => e.transportadora === 'Expedição').length },
   ];
   const CORES = ['#fba94c', '#00b37e', '#8257e5'];
 
