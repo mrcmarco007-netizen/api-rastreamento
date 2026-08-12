@@ -165,7 +165,7 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {enviosFiltrados.slice(0, 50).map((envio) => (
+            {enviosFiltrados?.slice(0, 50).map((envio) => (
               <tr key={envio.id}>
                 <td>{envio.transportadora}</td>
                 <td>{envio.nota_fiscal}</td>
